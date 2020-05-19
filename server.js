@@ -18,6 +18,9 @@ const sessionConfig = {
 server.use(session(sessionConfig)); // turn on sessions for the API
 server.use(express.json());
 
+server.use('/api/auth', authRouter);
+server.use('/api/users', usersRouter)
+
 server.get("/", (req, res) => {
   res.json({ api: "up" });
 });
