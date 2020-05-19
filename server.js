@@ -1,6 +1,9 @@
 const express = require("express");
 const session = require('express-session')
 
+const authRouter = require('./auth/auth-router')
+const usersRouter = require('./users/users-router')
+
 const server = express();
 // should be configed elsewhere
 const sessionConfig = {
