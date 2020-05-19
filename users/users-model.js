@@ -9,7 +9,7 @@ module.exports = {
 
 function find() {
   return db("users as u")
-    .join('department as d', 'u.role', 'd.id')
+    .join('department as d', 'u.department', 'd.id')
     .select("u.id", "u.username", 'd.name as department')
     .orderBy("u.id");
 }
